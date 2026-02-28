@@ -28,8 +28,9 @@ bronze_stream = (
         .withColumn("event_time", to_timestamp(col("event_time")))
         .withColumn("ingest_time", to_timestamp(col("ingest_time")))
 )
-
+```
 Write-Stream:
+```
 query = (
     bronze_stream.writeStream
         .format("delta")
