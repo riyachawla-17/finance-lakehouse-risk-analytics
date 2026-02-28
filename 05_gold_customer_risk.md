@@ -2,7 +2,8 @@
 
 Computes customer-level risk indicators based on transaction behavior.
 
-``from pyspark.sql.functions import when, max as fmax
+```
+from pyspark.sql.functions import when, max as fmax
 
 cust_daily = (
     silver.groupBy("txn_date", "customer_id")
