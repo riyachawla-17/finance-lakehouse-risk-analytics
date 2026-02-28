@@ -2,7 +2,8 @@
 
 Aggregates rejected records for monitoring data quality trends.
 
-``from pyspark.sql.functions import count
+```
+from pyspark.sql.functions import count
 
 rejects = spark.read.format("delta").load(silver_reject_path)
 rejects = rejects.withColumn("txn_date", to_date(col("event_time_ts")))
