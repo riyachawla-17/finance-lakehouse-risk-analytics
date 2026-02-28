@@ -3,7 +3,7 @@ Business-level aggregation.
 
 # Gold Layer – Daily Transaction KPIs
 Aggregates trusted Silver transactions into daily KPIs by country and currency.
-
+```
 df = silver.filter(col("event_time_ts").isNotNull())
 
 w_24h = Window.partitionBy("customer_id").orderBy(col("event_time_ts").cast("long")).rangeBetween(-24*3600, 0)
