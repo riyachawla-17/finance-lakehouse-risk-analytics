@@ -14,7 +14,7 @@ This notebook ingests raw financial transaction files from cloud storage using D
 
 ## Core Logic
 Read-Stream:
-``from pyspark.sql.functions import current_timestamp, input_file_name, col, to_timestamp
+```from pyspark.sql.functions import current_timestamp, input_file_name, col, to_timestamp
 
 bronze_stream = (
     spark.readStream
