@@ -10,7 +10,8 @@ This notebook transforms raw Bronze data into a trusted Silver dataset by applyi
 - Filter valid records
 
 #Code:
-```silver_path = f"{root}delta/silver/transactions_clean/"
+```
+silver_path = f"{root}delta/silver/transactions_clean/"
 silver_checkpoint = f"{root}checkpoints/silver_transactions_clean/"
 
 from pyspark.sql.functions import col, trim, upper, to_timestamp, current_timestamp
